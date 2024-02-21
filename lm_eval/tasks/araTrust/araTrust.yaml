@@ -1,0 +1,22 @@
+task: araTrust
+dataset_path: Deema/aratrust
+dataset_name: null
+dataset_kwargs: null
+output_type: multiple_choice
+training_split: null
+validation_split: null
+test_split: train
+fewshot_split: null
+process_docs: !function utils.process_docs
+doc_to_text:  "س: {{Question}} \n"
+doc_to_target: "{{gold}}"
+doc_to_choice: "{{choices}}"
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: acc_norm
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 1.0
