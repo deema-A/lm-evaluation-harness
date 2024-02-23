@@ -161,6 +161,7 @@ class TaskManager:
                 name_or_config = {"task": name_or_config, **update_config}
             elif self._name_is_task(name_or_config):
                 task_config = self._get_config(name_or_config)
+                print("task_config: ", task_config)
                 return load_task(task_config, task=name_or_config, group=parent_name)
             else:
                 group_name = name_or_config

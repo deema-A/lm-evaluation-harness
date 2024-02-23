@@ -728,6 +728,7 @@ class ConfigurableTask(Task):
         self.multiple_target = 0
         test_doc = self.task_docs[0]
         test_text = self.doc_to_text(test_doc)
+        print("***test_text***", test_text)
         test_target = self.doc_to_target(test_doc)
 
         if self.config.doc_to_choice is not None:
