@@ -8,7 +8,7 @@ validation_split: null
 test_split: train
 fewshot_split: null
 process_docs: !function utils.process_docs
-doc_to_text:  "س: {{Question}} \n"
+doc_to_text:  "س: {{question}} \n"
 doc_to_target: "{{gold}}"
 doc_to_choice: "{{choices}}"
 metric_list:
